@@ -1,0 +1,105 @@
+.cardPub{
+    transform-style:preserve-3d; 
+}
+
+.faccia{
+    backface-visibility: hidden;
+}
+
+footer section{
+    width:max-content;
+}
+body>header{
+    font-size:xx-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+article>header{
+    margin-top: 20px;
+    margin-bottom:20px;
+}
+.card{
+    height: 200px;
+    width:150px;
+}
+body{
+    width:100%;
+    display:flex ;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+}
+main{
+    display: flex;
+    flex-direction: row;
+}
+footer{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position:relative;
+    margin-top: 5vh;
+    animation-name: traslazione;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+}
+footer:hover{
+    animation-duration: 10s;
+}
+video{
+    height: 200px;
+    width:150px; 
+}
+@keyframes traslazione{
+    0%{translate: 0px;}
+    100%{translate:-1000px;}
+}
+.faccia{
+    animation-name:rotazione;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+@keyframes rotazione{
+    0%{rotate: (0deg);}
+    100%{rotate:90deg;}
+}
+.faccia>img{
+    height:110px;
+    width:110px;
+}
+div{
+    color:red;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+section>div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: yellow;
+}
+@media screen and (max-width:900px){
+    section>div{
+
+      animation-name:pubblicita;
+      animation-duration: 5s;
+      animation-iteration-count: 1;
+      height:100vh;
+      width:100vw;
+        display:none
+    }
+}
+@keyframes pubblicita{
+    99%{position:absolute;}
+    100%{display:none;}
+}
+@media print{
+    section>div{
+        display:none;
+    }
+    video{
+        display:none;
+    }
+}
+#carte{
+    margin-top:225px;
+    margin-left:50px;
+}
